@@ -1,0 +1,22 @@
+@import "src/styles/media";
+
+$container-widths: (
+    xs: 100%,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1440px,
+);
+
+.container {
+  width: 100%;
+  padding-inline: 16px;
+  margin-inline: auto;
+
+  @each $size, $width in $container-widths {
+    @include media($size) {
+      max-width: $width;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "nav": {
+    "main": "Home",
+    "history": "History",
+    "technologies": "Technologies"
+  },
+
+  "menu": {
+    "label": "Menu"
+  },
+
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+
+  "pageTitles": {
+    "main": "Weather",
+    "history": "Search History",
+    "technologies": "Technologies"
+  },
+
+  "footer": {
+    "createdBy": "Created by Max Shylov"
+  },
+
+  "searchCity": {
+    "placeholder": "Search city"
+  },
+
+  "empty": {
+    "selectedCity": "Find and select a city",
+    "weather": "Weather data is empty",
+    "forecast": "Forecast is empty",
+    "history": "History is empty"
+  },
+
+  "errors": {
+    "label": "Error",
+    "weather": "Failed to load weather data",
+    "forecast": "Failed to load forecast"
+  },
+
+  "history": {
+    "listTitle": "The last {{number}} searches",
+    "listButton": "Weather"
+  },
+
+  "forecast": {
+    "title": "Forecast",
+    "today": "Today",
+    "toggleSecondInfo": "Toggle second info"
+  },
+
+  "data": {
+    "asOf": "Data as of",
+    "temp": {
+      "label": "Temperature",
+      "feelsLike": "Feels like"
+    },
+    "pressure": "Pressure",
+    "sun": {
+      "sunrise": "Sunrise",
+      "sunset": "Sunset"
+    },
+    "precipitation": {
+      "label": "Precipitation",
+      "lastHour": "In the last hour"
+    },
+    "wind": {
+      "label": "Wind",
+      "gusts": "Gusts"
+    },
+    "conditions": {
+      "label": "Conditions",
+      "humidity": "Humidity",
+      "cloudiness": "Cloudiness",
+      "visibility": "Visibility"
+    }
+  },
+
+  "units": {
+    "hPa": "hPa",
+    "celsius": "°C",
+    "mm": "mm",
+    "km": "km",
+    "m": "m",
+    "metersPerSec": "m/s"
+  },
+
+  "technologies": {
+    "main": "Main Technologies",
+    "react": {
+      "title": "React 19",
+      "description": "The foundation of the application, component-based approach"
+    },
+    "nextJs": {
+      "title": "Next.js 15",
+      "description": "Server-side rendering, routing"
+    },
+    "typeScript": {
+      "title": "TypeScript 5",
+      "description": "Strict typing, improved code readability"
+    },
+
+    "stateManagement": "State Management",
+    "reduxToolkit": {
+      "title": "Redux Toolkit",
+      "description": "State management, storing weather, history, and theme"
+    },
+    "reduxPersist": {
+      "title": "Redux Persist",
+      "description": "Saving data in LocalStorage (history and theme)"
+    },
+
+    "apiRequests": "API Requests",
+    "rtkQuery": {
+      "title": "RTK Query (Redux Toolkit)",
+      "description": "Fetching data from OpenWeather API"
+    },
+    "axios": {
+      "title": "Axios",
+      "description": "Easy HTTP request handling"
+    },
+
+    "stylingUi": "Styling and UI",
+    "scss": {
+      "title": "SCSS (SASS)",
+      "description": "Component styling, variables, mixins"
+    },
+    "antDesign": {
+      "title": "Ant Design",
+      "description": "Ready-to-use UI components"
+    },
+    "lucideReact": {
+      "title": "Lucide React",
+      "description": "Icons"
+    },
+
+    "localization": "Localization",
+    "i18next": {
+      "title": "i18next",
+      "description": "Multilingual support (Ukrainian/English)"
+    },
+    "nextI18next": {
+      "title": "next-i18next",
+      "description": "Localization integration in Next.js"
+    },
+
+    "lintingQuality": "Linting and Code Quality",
+    "eslintPrettier": {
+      "title": "ESLint + Prettier",
+      "description": "JS/TS code quality control"
+    },
+    "stylelint": {
+      "title": "Stylelint",
+      "description": "Checking styles for errors"
+    },
+
+    "utilities": "Utilities",
+    "clsx": {
+      "title": "clsx",
+      "description": "Easy handling of dynamic CSS classes"
+    },
+    "dayjs": {
+      "title": "dayjs",
+      "description": "Working with dates and time (forecast display)"
+    },
+    "uuid": {
+      "title": "uuid",
+      "description": "Generating unique keys for lists"
+    }
+  }
+}

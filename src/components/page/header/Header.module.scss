@@ -1,0 +1,45 @@
+@import "src/styles/media";
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-inline: 0 !important;
+
+  &.light {
+    background: rgba(#fff, 0.9);
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+  }
+}
+
+.headerContainer {
+  display: grid;
+  grid-template-columns: min-content 1fr 40px;
+  gap: 24px;
+
+  @include media(md) {
+    grid-template-columns: min-content 1fr min-content;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.controls {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-left: auto;
+
+  @include media(md) {
+    order: 1
+  }
+}

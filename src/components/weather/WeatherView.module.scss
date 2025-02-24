@@ -1,0 +1,96 @@
+@import "../../styles/media";
+
+.weatherCurrent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.date {
+  margin-inline: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  @include media(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+
+  :global {
+    .ant-card-head {
+      border-bottom: none;
+    }
+
+    .ant-card-head-title {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 16px;
+
+      @include media(md) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.value {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mainValue {
+  @extend .value;
+
+  font-size: 26px;
+
+  @include media(md) {
+    font-size: 36px;
+  }
+
+  @include media(lg) {
+    font-size: 48px;
+  }
+}
+
+.secondValue {
+  @extend .value;
+
+  font-size: 18px;
+
+  @include media(md) {
+    font-size: 24px;
+  }
+}
+
+.windArrow {
+  width: 24px;
+  height: 24px;
+
+  @include media(md) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @include media(lg) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.condition {
+  margin-bottom: 12px;
+}
+
+.conditionsDescription {
+  line-height: 1;
+}

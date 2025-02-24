@@ -1,0 +1,33 @@
+@import "../../../styles/media";
+
+.listItem {
+  @include media(xl) {
+    width: 928px;
+  }
+}
+
+.date {
+  &:global {
+    &.ant-skeleton.ant-skeleton-element {
+      .ant-skeleton-input {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+.card {
+  &:global {
+    &.ant-skeleton.ant-skeleton-element {
+      .ant-skeleton-image {
+        width: 100%;
+        height: 94px;
+
+        @include media(md) {
+          height: 58px;
+        }
+      }
+    }
+  }
+}

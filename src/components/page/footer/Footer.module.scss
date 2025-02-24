@@ -1,0 +1,16 @@
+.footer {
+  padding-inline: 0 !important;
+}
+
+.footerContent {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  font-size: 18px;
+  color: inherit;
+  text-decoration: none;
+}

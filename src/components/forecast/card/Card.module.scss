@@ -1,0 +1,162 @@
+@import "../../../styles/media";
+
+.card {
+  &:global {
+    &.ant-skeleton.ant-skeleton-element {
+      .ant-skeleton-image {
+        width: 100%;
+      }
+    }
+  }
+
+  :global {
+    .ant-card-head {
+      border-bottom: none;
+    }
+
+    .ant-card-head-title {
+      font-size: 16px;
+
+      @include media(md) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.cardBody {
+  position: relative;
+
+  @include media(md) {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @include media(md) {
+    justify-content: normal;
+    width: auto;
+  }
+}
+
+.cardTitle {
+  width: 90px;
+
+  &.desktop {
+    display: none;
+
+    @include media(md) {
+      display: block;
+    }
+  }
+
+  &.mobile {
+    display: block;
+
+    @include media(md) {
+      display: none;
+    }
+  }
+}
+
+.value {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 24px;
+}
+
+.conditionDescription {
+  line-height: 1;
+
+  @include media(md) {
+    width: 150px;
+  }
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  min-height: 32px;
+
+  @include media(md) {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.secondInfoWrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+
+  &.show {
+    height: 80px;
+
+    @include media(lg) {
+      height: 40px;
+    }
+  }
+}
+
+.secondInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 16px;
+  padding-top: 16px;
+  font-size: 12px;
+
+  @include media(lg) {
+    grid-template-columns: 90px 90px 90px 70px 70px 80px 32px;
+  }
+}
+
+.secondInfoSwitcher {
+  right: 0;
+  bottom: 0;
+
+  &:global {
+    &.ant-btn {
+      position: absolute;
+    }
+  }
+
+  :global {
+    .ant-btn-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.arrow {
+  transition: transform 0.3s;
+
+  &.up {
+    transform: rotate(180deg);
+  }
+}
+
+.temp {
+  width: 145px;
+}
+
+.wind {
+  width: 120px;
+}

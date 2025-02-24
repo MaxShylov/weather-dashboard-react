@@ -1,0 +1,51 @@
+@import "../../styles/media";
+
+.forecast{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(lg) {
+    gap: 24px;
+  }
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+
+  @include media(lg) {
+    flex-direction: row;
+    gap: 32px;
+    align-items: normal;
+  }
+
+  @include media(xl) {
+    margin-inline: auto;
+  }
+}
+
+.date {
+  width: 130px;
+  min-width: 130px;
+  text-align: center;
+
+  @include media(lg) {
+    text-align: left;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}

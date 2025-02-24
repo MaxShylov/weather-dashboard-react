@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "main": "Головна",
+    "history": "Історія",
+    "technologies": "Технології"
+  },
+
+  "menu": {
+    "label": "Меню"
+  },
+
+  "theme": {
+    "toggle": "Змінити тему"
+  },
+
+  "pageTitles": {
+    "main": "Погода",
+    "history": "Історія пошуку",
+    "technologies": "Технології"
+  },
+
+  "footer": {
+    "createdBy": "Створено Максом Шиловим"
+  },
+
+  "searchCity": {
+    "placeholder": "Пошук міста"
+  },
+
+  "empty": {
+    "selectedCity": "Знайдіть та виберіть місто",
+    "weather": "Дані про погоду відсутні",
+    "forecast": "Прогноз відсутній",
+    "history": "Історія відсутня"
+  },
+
+  "errors": {
+    "label": "Помилка",
+    "weather": "Не вдалося завантажити дані про погоду",
+    "forecast": "Не вдалося завантажити прогноз"
+  },
+
+  "history": {
+    "listTitle": "Останні {{number}} пошуків",
+    "listButton": "Погода"
+  },
+
+  "forecast": {
+    "title": "Прогноз",
+    "today": "Сьогодні"
+  },
+
+  "data": {
+    "asOf": "Дані на",
+    "temp": {
+      "label": "Температура",
+      "feelsLike": "Відчувається як"
+    },
+    "pressure": "Тиск",
+    "sun": {
+      "sunrise": "Схід сонця",
+      "sunset": "Захід сонця"
+    },
+    "precipitation": {
+      "label": "Опади",
+      "lastHour": "За останню годину"
+    },
+    "wind": {
+      "label": "Вітер",
+      "gusts": "Пориви"
+    },
+    "conditions": {
+      "label": "Умови",
+      "humidity": "Вологість",
+      "cloudiness": "Хмарність",
+      "visibility": "Видимість"
+    }
+  },
+
+  "units": {
+    "hPa": "гПа",
+    "celsius": "°C",
+    "mm": "мм",
+    "km": "км",
+    "m": "m",
+    "metersPerSec": "м/с"
+  },
+
+  "technologies": {
+    "main": "Основні технології",
+    "react": {
+      "title": "React 19",
+      "description": "Основа застосунку, компонентний підхід"
+    },
+    "nextJs": {
+      "title": "Next.js 15",
+      "description": "Серверний рендеринг, маршрутизація"
+    },
+    "typeScript": {
+      "title": "TypeScript 5",
+      "description": "Строга типізація, покращена читабельність коду"
+    },
+
+    "stateManagement": "Стейт-менеджмент",
+    "reduxToolkit": {
+      "title": "Redux Toolkit",
+      "description": "Управління станом, збереження погоди, історії та теми"
+    },
+    "reduxPersist": {
+      "title": "Redux Persist",
+      "description": "Збереження даних у LocalStorage (історія та тема)"
+    },
+
+    "apiRequests": "Запити до API",
+    "rtkQuery": {
+      "title": "RTK Query (Redux Toolkit)",
+      "description": "Отримання даних з OpenWeather API"
+    },
+    "axios": {
+      "title": "Axios",
+      "description": "Зручна робота з HTTP-запитами"
+    },
+
+    "stylingUi": "Стилізація та UI",
+    "scss": {
+      "title": "SCSS (SASS)",
+      "description": "Стилізація компонентів, змінні, міксіни"
+    },
+    "antDesign": {
+      "title": "Ant Design",
+      "description": "Готові UI-компоненти"
+    },
+    "lucideReact": {
+      "title": "Lucide React",
+      "description": "Іконки"
+    },
+
+    "localization": "Локалізація",
+    "i18next": {
+      "title": "i18next",
+      "description": "Підтримка мультимовності (українська/англійська)"
+    },
+    "nextI18next": {
+      "title": "next-i18next",
+      "description": "Інтеграція локалізації у Next.js"
+    },
+
+    "lintingQuality": "Лінтинг і якість коду",
+    "eslintPrettier": {
+      "title": "ESLint + Prettier",
+      "description": "Контроль якості JS/TS-коду"
+    },
+    "stylelint": {
+      "title": "Stylelint",
+      "description": "Перевірка стилів на помилки"
+    },
+
+    "utilities": "Утиліти",
+    "clsx": {
+      "title": "clsx",
+      "description": "Зручна робота з динамічними CSS-класами"
+    },
+    "dayjs": {
+      "title": "dayjs",
+      "description": "Робота з датами та часом (відображення прогнозу)"
+    },
+    "uuid": {
+      "title": "uuid",
+      "description": "Генерація унікальних ключів для списків"
+    }
+  }
+}

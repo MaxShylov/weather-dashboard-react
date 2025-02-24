@@ -1,0 +1,32 @@
+@import "src/styles/media";
+
+.languageSwitcher {
+  :global {
+    .ant-select-selection-item {
+      .full–name {
+        display: none;
+      }
+    }
+  }
+}
+
+.popup {
+  top: 72px !important;
+
+  :global {
+    .ant-select-item {
+      width: 100%;
+      padding: 11px 24px;
+    }
+  }
+}
+
+.option {
+  width: max-content;
+
+  :global {
+    .short–name {
+      display: none;
+    }
+  }
+}
