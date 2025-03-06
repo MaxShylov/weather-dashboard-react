@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import Card from 'antd/es/card';
 
-import { CloudDrizzle, Snowflake } from 'lucide-react';
+import { CloudDrizzleIcon, SnowflakeIcon } from 'lucide-react';
 
 import { useUnitsLabel } from '@/hooks/useUnitsLabel';
 
@@ -29,10 +29,10 @@ export const Precipitation: FC<PrecipitationProps> = ({ rain, snow }) => {
       title={<CardTitle name={name} />}
     >
       <div className={styles.secondValue}>
-        <CloudDrizzle /> {rain ?? 0} {mm}
+        <CloudDrizzleIcon /> {rain ?? 0} {mm}
       </div>
       <div className={styles.secondValue}>
-        <Snowflake /> {snow ?? 0} {mm}
+        <SnowflakeIcon /> {snow ?? 0} {mm}
       </div>
       <div>{t('data.precipitation.lastHour')}</div>
     </Card>

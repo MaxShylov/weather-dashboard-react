@@ -1,16 +1,24 @@
 .menu {
   :global {
-    .ant-menu-overflow-item-rest.ant-menu-submenu-selected {
-      padding: 0;
-      background-color: inherit;
-      transition:none;
+    .ant-menu-overflow-item-rest{
+      &.ant-menu-submenu-selected {
+        padding: 0;
+        background-color: inherit;
+        transition: none;
 
-      &::after {
-        content: none;
+        &::after {
+          content: none;
+        }
+
+        &:hover {
+          background-color: inherit;
+        }
       }
 
-      &:hover {
-        background-color: inherit;
+      .ant-menu-submenu-title {
+        display: flex;
+        align-items: center;
+        height: 64px;
       }
     }
   }

@@ -1,9 +1,9 @@
 import React, { type FC } from 'react';
 
 import {
-  Thermometer,
-  ThermometerSnowflake,
-  ThermometerSun,
+  ThermometerIcon,
+  ThermometerSnowflakeIcon,
+  ThermometerSunIcon,
 } from 'lucide-react';
 
 interface TemperatureIconProps {
@@ -11,7 +11,7 @@ interface TemperatureIconProps {
 }
 
 export const TemperatureIcon: FC<TemperatureIconProps> = ({ temp }) => {
-  if (temp < 0) return <ThermometerSnowflake />;
-  if (temp > 0) return <ThermometerSun />;
-  return <Thermometer />;
+  if (temp < 0) return <ThermometerSnowflakeIcon />;
+  if (temp > 0) return <ThermometerSunIcon />;
+  return <ThermometerIcon />;
 };

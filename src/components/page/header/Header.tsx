@@ -4,11 +4,11 @@ import clsx from 'clsx';
 
 import { Header as AntHeader } from 'antd/es/layout/layout';
 
-import { CloudSunRain } from 'lucide-react';
+import { CloudSunRainIcon } from 'lucide-react';
 
 import { LanguageSwitcher } from '@/components/language-switcher';
 import { Navigation } from '@/components/navigation';
-import { ThemeSwitcher } from '@/components/theme-switcher';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { useTheme } from '@/hooks/store';
 
 import { Container } from '../container';
@@ -26,7 +26,7 @@ export const Header: FC = () => {
     >
       <Container className={styles.headerContainer}>
         <Link className={styles.logo} href="/">
-          <CloudSunRain size={40} />
+          <CloudSunRainIcon size={40} />
         </Link>
 
         <div className={styles.controls}>

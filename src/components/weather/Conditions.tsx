@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import Card from 'antd/es/card';
 
-import { Binoculars, Cloudy, Droplet } from 'lucide-react';
+import { BinocularsIcon, CloudyIcon, DropletIcon } from 'lucide-react';
 
 import { ConditionImage } from '@/components/condition-image';
 import { upperFirst } from '@/helpers';
@@ -49,13 +49,13 @@ export const Conditions: FC<ConditionsProps> = ({
       </div>
 
       <div className={styles.value}>
-        <Droplet size={16} /> {t('data.conditions.humidity')}: {humidity} %
+        <DropletIcon size={16} /> {t('data.conditions.humidity')}: {humidity} %
       </div>
       <div className={styles.value}>
-        <Cloudy size={16} /> {t('data.conditions.cloudiness')}: {clouds} %
+        <CloudyIcon size={16} /> {t('data.conditions.cloudiness')}: {clouds} %
       </div>
       <div className={styles.value}>
-        <Binoculars size={16} /> {t('data.conditions.visibility')}:{' '}
+        <BinocularsIcon size={16} /> {t('data.conditions.visibility')}:{' '}
         {visibilityData.value} {visibilityData.unit}
       </div>
     </Card>

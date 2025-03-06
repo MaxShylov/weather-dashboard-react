@@ -5,9 +5,10 @@ import { useTranslation } from 'next-i18next';
 
 import Menu from 'antd/es/menu';
 
-import { useTheme } from '@/hooks/store';
+import { MenuIcon } from 'lucide-react';
 
-import { ButtonMenu } from './ButtonMenu';
+import { ButtonIcon } from '@/components/button-icon';
+import { useTheme } from '@/hooks/store';
 
 import styles from './Navigation.module.scss';
 
@@ -33,12 +34,15 @@ export const Navigation: FC = () => {
 
   return (
     <Menu
+      overflowedIndicator={
+        <ButtonIcon icon={<MenuIcon />} label={t('menu.label')} />
+      }
       className={styles.menu}
       items={items}
       mode="horizontal"
-      overflowedIndicator={<ButtonMenu />}
       selectedKeys={[pathname]}
       theme={theme}
+      triggerSubMenuAction="click"
     />
   );
 };

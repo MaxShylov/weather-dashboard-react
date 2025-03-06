@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import Card from 'antd/es/card';
 
-import { ArrowDown } from 'lucide-react';
+import { ArrowDownIcon } from 'lucide-react';
 
 import { useUnitsLabel } from '@/hooks/useUnitsLabel';
 import { type WindData } from '@/types';
@@ -27,7 +27,7 @@ export const Wind: FC<WindData> = ({ deg, gust, speed }) => {
           {speed} {metersPerSec}
         </span>
         {!!speed && (
-          <ArrowDown
+          <ArrowDownIcon
             className={styles.windArrow}
             style={{ rotate: `${deg}deg` }}
           />

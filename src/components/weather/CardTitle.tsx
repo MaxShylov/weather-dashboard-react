@@ -2,16 +2,16 @@ import React, { type FC } from 'react';
 import { useTranslation } from 'next-i18next';
 
 import {
-  CloudSun,
-  DropletOff,
-  Droplets,
-  Sunrise,
-  Sunset,
-  Thermometer,
-  ThermometerSnowflake,
-  ThermometerSun,
-  Wind,
-  WindArrowDown,
+  CloudSunIcon,
+  DropletOffIcon,
+  DropletsIcon,
+  SunriseIcon,
+  SunsetIcon,
+  ThermometerIcon,
+  ThermometerSnowflakeIcon,
+  ThermometerSunIcon,
+  WindArrowDownIcon,
+  WindIcon,
 } from 'lucide-react';
 
 type Name =
@@ -27,16 +27,16 @@ type Name =
   | 'wind';
 
 const iconMap: Record<Name, FC> = {
-  conditions: CloudSun,
-  precipitation: Droplets,
-  precipitationDry: DropletOff,
-  pressure: WindArrowDown,
-  sunrise: Sunrise,
-  sunset: Sunset,
-  temperatureNegative: ThermometerSnowflake,
-  temperaturePositive: ThermometerSun,
-  temperatureZero: Thermometer,
-  wind: Wind,
+  conditions: CloudSunIcon,
+  precipitation: DropletsIcon,
+  precipitationDry: DropletOffIcon,
+  pressure: WindArrowDownIcon,
+  sunrise: SunriseIcon,
+  sunset: SunsetIcon,
+  temperatureNegative: ThermometerSnowflakeIcon,
+  temperaturePositive: ThermometerSunIcon,
+  temperatureZero: ThermometerIcon,
+  wind: WindIcon,
 };
 
 interface CardTitleProps {

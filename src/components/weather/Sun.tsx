@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 
 import Card from 'antd/es/card';
 
-import { Sunrise, Sunset } from 'lucide-react';
+import { SunriseIcon, SunsetIcon } from 'lucide-react';
 
 import { CardTitle } from './CardTitle';
 
@@ -27,7 +27,7 @@ export const Sun: FC<SunriseSunsetProps> = ({ sunrise, sunset }) => {
   const mainValue = isSun ? sunset : sunrise;
 
   const secondText = !isSun ? t('data.sun.sunset') : t('data.sun.sunrise');
-  const secondIcon = !isSun ? <Sunset size={16} /> : <Sunrise size={16} />;
+  const SecondIcon = !isSun ? SunsetIcon : SunriseIcon;
   const secondValue = !isSun ? sunset : sunrise;
 
   return (
@@ -40,7 +40,8 @@ export const Sun: FC<SunriseSunsetProps> = ({ sunrise, sunset }) => {
         {dayjs.unix(mainValue).format('HH:mm')}
       </div>
       <div className={styles.value}>
-        {secondIcon} {secondText}: {dayjs.unix(secondValue).format('HH:mm')}
+        <SecondIcon size={16} /> {secondText}:{' '}
+        {dayjs.unix(secondValue).format('HH:mm')}
       </div>
     </Card>
   );

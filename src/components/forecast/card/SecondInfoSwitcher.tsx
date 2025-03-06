@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import Button from 'antd/es/button';
 
-import { ArrowDown } from 'lucide-react';
+import { ArrowDownIcon } from 'lucide-react';
 
 import styles from './Card.module.scss';
 
@@ -17,16 +17,13 @@ export const SecondInfoSwitcher = memo<SecondInfoSwitcherProps>(
   ({ active, onClick: handleClick }) => {
     const { t } = useTranslation();
 
+    const iconClasses = clsx(styles.arrow, { [styles.up]: active });
+
     return (
       <Button
-        icon={
-          <ArrowDown
-            className={clsx(styles.arrow, { [styles.up]: active })}
-            size={20}
-          />
-        }
         aria-label={t('forecast.toggleSecondInfo')}
         className={styles.secondInfoSwitcher}
+        icon={<ArrowDownIcon className={iconClasses} size={20} />}
         onClick={handleClick}
       />
     );

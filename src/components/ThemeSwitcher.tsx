@@ -1,19 +1,15 @@
 import React, { type FC } from 'react';
 import { useTranslation } from 'next-i18next';
 
-import Button from 'antd/es/button';
+import { MoonIcon, SunIcon } from 'lucide-react';
 
-import MoonOutlined from '@ant-design/icons/MoonOutlined';
-import SunOutlined from '@ant-design/icons/SunOutlined';
-
+import { ButtonIcon } from '@/components/button-icon';
 import { toggleTheme } from '@/features/theme';
 import { useAppDispatch, useTheme } from '@/hooks/store';
 
-import styles from './ThemeSwitcher.module.scss';
-
 const iconMap = {
-  dark: <SunOutlined size={30} />,
-  light: <MoonOutlined size={30} />,
+  dark: <SunIcon />,
+  light: <MoonIcon />,
 };
 
 export const ThemeSwitcher: FC = () => {
@@ -24,11 +20,9 @@ export const ThemeSwitcher: FC = () => {
   const handleThemeClick = () => dispatch(toggleTheme());
 
   return (
-    <Button
-      aria-label={t('theme.toggle')}
-      className={styles.button}
+    <ButtonIcon
       icon={iconMap[theme]}
-      size="large"
+      label={t('theme.toggle')}
       onClick={handleThemeClick}
     />
   );

@@ -4,13 +4,13 @@ import clsx from 'clsx';
 import AntCard from 'antd/es/card';
 
 import {
-  ArrowDown,
-  Binoculars,
-  CloudRain,
-  Cloudy,
-  Droplet,
-  Snowflake,
-  WindArrowDown,
+  ArrowDownIcon,
+  BinocularsIcon,
+  CloudRainIcon,
+  CloudyIcon,
+  DropletIcon,
+  SnowflakeIcon,
+  WindArrowDownIcon,
   WindIcon,
 } from 'lucide-react';
 
@@ -83,7 +83,7 @@ export const Card: FC<CardProps> = ({
               <div className={clsx(styles.value, styles.wind)}>
                 <WindIcon /> {windSpeed} {metersPerSec}
                 {!!windSpeed && (
-                  <ArrowDown
+                  <ArrowDownIcon
                     className={styles.windArrow}
                     size={18}
                     style={{ rotate: `${windDeg}deg` }}
@@ -105,27 +105,27 @@ export const Card: FC<CardProps> = ({
           >
             <div className={styles.secondInfo}>
               <div className={styles.value}>
-                <WindArrowDown /> {pressure} {hPa}
+                <WindArrowDownIcon /> {pressure} {hPa}
               </div>
 
               <div className={styles.value}>
-                <CloudRain /> {rain} {mm}
+                <CloudRainIcon /> {rain} {mm}
               </div>
 
               <div className={styles.value}>
-                <Snowflake /> {snow} {mm}
+                <SnowflakeIcon /> {snow} {mm}
               </div>
 
               <div className={styles.value}>
-                <Droplet /> {humidity} %
+                <DropletIcon /> {humidity} %
               </div>
 
               <div className={styles.value}>
-                <Cloudy /> {clouds} %
+                <CloudyIcon /> {clouds} %
               </div>
 
               <div className={styles.value}>
-                <Binoculars /> {visibilityData.value} {visibilityData.unit}
+                <BinocularsIcon /> {visibilityData.value} {visibilityData.unit}
               </div>
             </div>
           </div>

@@ -5,8 +5,7 @@ import AutoComplete from 'antd/es/auto-complete';
 import { type InputRef } from 'antd/es/input';
 import Input from 'antd/es/input/Input';
 
-import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
-
+import { Loader } from '@/components/loader';
 import { addHistoryCity } from '@/features/history';
 import { setWeatherSelectedCity } from '@/features/weather';
 import { getCityLabel, getSelectedCity } from '@/helpers';
@@ -44,7 +43,10 @@ export const SearchCity: FC = () => {
       clearTimeout(debounceTimeout.current);
     }
 
-    debounceTimeout.current = setTimeout(() => setSearchCityName(value), 300);
+    debounceTimeout.current = setTimeout(
+      () => setSearchCityName(value.trim()),
+      300
+    );
   }, []);
 
   const handleSelect = useCallback(
@@ -78,7 +80,7 @@ export const SearchCity: FC = () => {
           ref={inputRef}
           placeholder={t('searchCity.placeholder')}
           size="large"
-          suffix={isFetching ? <LoadingOutlined /> : null}
+          suffix={isFetching ? <Loader /> : null}
           allowClear
         />
       </AutoComplete>
