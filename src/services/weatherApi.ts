@@ -14,7 +14,7 @@ import {
   transformForecastResponse,
 } from './transformers';
 
-export const weatherApi = createApi({
+const weatherApi = createApi({
   baseQuery: axiosBaseQuery({ baseUrl: 'https://api.openweathermap.org' }),
   endpoints: (builder) => ({
     getForecast: builder.query<DayForecast[], ForecastParams>({
@@ -48,3 +48,5 @@ export const weatherApi = createApi({
 
 export const { useGetForecastQuery, useGetWeatherQuery, useSearchCityQuery } =
   weatherApi;
+
+export default weatherApi;

@@ -8,14 +8,15 @@ import Menu from 'antd/es/menu';
 import { MenuIcon } from 'lucide-react';
 
 import { ButtonIcon } from '@/components/button-icon';
-import { useTheme } from '@/hooks/store';
+import { selectTheme } from '@/features/themeSlice';
+import { useAppSelector } from '@/hooks/store';
 
 import styles from './Navigation.module.scss';
 
 export const Navigation: FC = () => {
   const { t } = useTranslation();
   const pathname = usePathname();
-  const theme = useTheme();
+  const theme = useAppSelector(selectTheme);
 
   const items = [
     {

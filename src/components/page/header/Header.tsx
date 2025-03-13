@@ -9,14 +9,15 @@ import { CloudSunRainIcon } from 'lucide-react';
 import { LanguageSwitcher } from '@/components/language-switcher';
 import { Navigation } from '@/components/navigation';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
-import { useTheme } from '@/hooks/store';
+import { selectTheme } from '@/features/themeSlice';
+import { useAppSelector } from '@/hooks/store';
 
 import { Container } from '../container';
 
 import styles from './Header.module.scss';
 
 export const Header: FC = () => {
-  const theme = useTheme();
+  const theme = useAppSelector(selectTheme);
 
   const isLightTheme = theme === 'light';
 

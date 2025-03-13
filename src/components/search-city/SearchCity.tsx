@@ -6,8 +6,8 @@ import { type InputRef } from 'antd/es/input';
 import Input from 'antd/es/input/Input';
 
 import { Loader } from '@/components/loader';
-import { addHistoryCity } from '@/features/history';
-import { setWeatherSelectedCity } from '@/features/weather';
+import { addHistoryCity } from '@/features/historySlice';
+import { setSelectedCity } from '@/features/weatherSlice';
 import { getCityLabel, getSelectedCity } from '@/helpers';
 import { useAppDispatch } from '@/hooks/store';
 import { useSearchCityQuery } from '@/services/weatherApi';
@@ -55,7 +55,7 @@ export const SearchCity: FC = () => {
 
       if (!selectedCity) return;
 
-      dispatch(setWeatherSelectedCity(selectedCity));
+      dispatch(setSelectedCity(selectedCity));
       dispatch(addHistoryCity(selectedCity));
 
       setCityName('');

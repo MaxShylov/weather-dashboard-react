@@ -3,7 +3,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { SEARCH_HISTORY_COUNT } from '@/constants';
 import { type City } from '@/types';
 
-export interface HistoryState {
+interface HistoryState {
   cities: City[];
 }
 
@@ -11,7 +11,7 @@ const initialState: HistoryState = {
   cities: [],
 };
 
-export const historySlice = createSlice({
+const historySlice = createSlice({
   initialState,
   name: 'history',
   reducers: {
@@ -24,8 +24,13 @@ export const historySlice = createSlice({
       ];
     },
   },
+  selectors: {
+    selectHistoryCities: (state) => state.cities,
+  },
 });
+
+export const { selectHistoryCities } = historySlice.selectors;
 
 export const { addHistoryCity } = historySlice.actions;
 
-export default historySlice.reducer;
+export default historySlice;

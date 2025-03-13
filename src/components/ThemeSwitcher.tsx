@@ -4,8 +4,8 @@ import { useTranslation } from 'next-i18next';
 import { MoonIcon, SunIcon } from 'lucide-react';
 
 import { ButtonIcon } from '@/components/button-icon';
-import { toggleTheme } from '@/features/theme';
-import { useAppDispatch, useTheme } from '@/hooks/store';
+import { selectTheme, toggleTheme } from '@/features/themeSlice';
+import { useAppDispatch, useAppSelector } from '@/hooks/store';
 
 const iconMap = {
   dark: <SunIcon />,
@@ -14,7 +14,7 @@ const iconMap = {
 
 export const ThemeSwitcher: FC = () => {
   const { t } = useTranslation();
-  const theme = useTheme();
+  const theme = useAppSelector(selectTheme);
   const dispatch = useAppDispatch();
 
   const handleThemeClick = () => dispatch(toggleTheme());

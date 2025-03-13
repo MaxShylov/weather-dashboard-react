@@ -7,16 +7,16 @@ import Title from 'antd/es/typography/Title';
 
 import { Empty } from '@/components/Empty';
 import { SEARCH_HISTORY_COUNT } from '@/constants';
-import { setWeatherSelectedCity } from '@/features/weather';
+import { selectHistoryCities } from '@/features/historySlice';
+import { setSelectedCity } from '@/features/weatherSlice';
 import { getCityLabel, getSelectedCity } from '@/helpers';
-import { useAppDispatch } from '@/hooks/store';
-import { useHistoryCities } from '@/hooks/store/history';
+import { useAppDispatch, useAppSelector } from '@/hooks/store';
 
 import styles from './CitySearchHistory.module.scss';
 
 export const CitySearchHistory: FC = () => {
   const { i18n, t } = useTranslation();
-  const cities = useHistoryCities();
+  const cities = useAppSelector(selectHistoryCities);
   const dispatch = useAppDispatch();
 
   const handleButtonClick = useCallback(
@@ -25,7 +25,7 @@ export const CitySearchHistory: FC = () => {
 
       if (!selectedCity) return;
 
-      dispatch(setWeatherSelectedCity(selectedCity));
+      dispatch(setSelectedCity(selectedCity));
     },
     [cities, dispatch]
   );

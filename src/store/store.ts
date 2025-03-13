@@ -1,13 +1,13 @@
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { combineSlices, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import { historyReducer } from '@/features/history';
-import { themeReducer } from '@/features/theme';
-import { weatherReducer } from '@/features/weather';
-import { weatherApi } from '@/services/weatherApi';
+import historySlice from '@/features/historySlice';
+import themeSlice from '@/features/themeSlice';
+import weatherSlice from '@/features/weatherSlice';
+import weatherApi from '@/services/weatherApi';
 
 const persistConfig = {
   key: 'root',
@@ -15,14 +15,14 @@ const persistConfig = {
   whitelist: ['history', 'theme'],
 };
 
-const rootReducer = combineReducers({
-  history: historyReducer,
-  theme: themeReducer,
-  weather: weatherReducer,
-  [weatherApi.reducerPath]: weatherApi.reducer,
-});
+const rootReducerNew = combineSlices(
+  themeSlice,
+  weatherSlice,
+  historySlice,
+  weatherApi
+);
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducerNew);
 
 export const store = configureStore({
   middleware: (getDefaultMiddleware) =>

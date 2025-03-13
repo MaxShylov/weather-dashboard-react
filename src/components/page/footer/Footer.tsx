@@ -9,7 +9,8 @@ import Text from 'antd/es/typography/Text';
 import gitHubSrc from '@/assets/icons/git-hub.svg';
 import gitHubWhiteSrc from '@/assets/icons/git-hub-white.svg';
 import linkedInSrc from '@/assets/icons/linked-in.svg';
-import { useTheme } from '@/hooks/store';
+import { selectTheme } from '@/features/themeSlice';
+import { useAppSelector } from '@/hooks/store';
 
 import { Container } from '../container';
 
@@ -17,7 +18,7 @@ import styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
   const { t } = useTranslation();
-  const theme = useTheme();
+  const theme = useAppSelector(selectTheme);
 
   const gitHubIconSrc = theme === 'light' ? gitHubSrc : gitHubWhiteSrc;
 

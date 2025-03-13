@@ -6,7 +6,8 @@ import antdTheme from 'antd/es/theme';
 import enUS from 'antd/locale/en_US';
 import ukUA from 'antd/locale/uk_UA';
 
-import { useTheme } from '@/hooks/store';
+import { selectTheme } from '@/features/themeSlice';
+import { useAppSelector } from '@/hooks/store';
 
 const localeMap = {
   en: enUS,
@@ -19,7 +20,7 @@ const themeMap = {
 };
 
 export const AntConfigProvider: FC<PropsWithChildren> = ({ children }) => {
-  const theme = useTheme();
+  const theme = useAppSelector(selectTheme);
   const { i18n } = useTranslation();
 
   const configLocale = localeMap[i18n.language as 'en' | 'uk'] || enUS;
