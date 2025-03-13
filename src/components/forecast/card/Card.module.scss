@@ -1,4 +1,4 @@
-@import "../../../styles/media";
+@use "src/styles/mixins";
 
 .card {
   &:global {
@@ -17,7 +17,7 @@
     .ant-card-head-title {
       font-size: 16px;
 
-      @include media(md) {
+      @include mixins.media(md) {
         font-size: 20px;
       }
     }
@@ -27,7 +27,7 @@
 .cardBody {
   position: relative;
 
-  @include media(md) {
+  @include mixins.media(md) {
     display: flex;
     gap: 32px;
     align-items: center;
@@ -40,7 +40,7 @@
   justify-content: space-between;
   width: 100%;
 
-  @include media(md) {
+  @include mixins.media(md) {
     justify-content: normal;
     width: auto;
   }
@@ -52,7 +52,7 @@
   &.desktop {
     display: none;
 
-    @include media(md) {
+    @include mixins.media(md) {
       display: block;
     }
   }
@@ -60,7 +60,7 @@
   &.mobile {
     display: block;
 
-    @include media(md) {
+    @include mixins.media(md) {
       display: none;
     }
   }
@@ -76,7 +76,7 @@
 .conditionDescription {
   line-height: 1;
 
-  @include media(md) {
+  @include mixins.media(md) {
     width: 150px;
   }
 }
@@ -88,7 +88,7 @@
   width: 100%;
   min-height: 32px;
 
-  @include media(md) {
+  @include mixins.media(md) {
     flex-direction: row;
     gap: 16px;
   }
@@ -108,7 +108,7 @@
   &.show {
     height: 80px;
 
-    @include media(lg) {
+    @include mixins.media(lg) {
       height: 40px;
     }
   }
@@ -121,7 +121,7 @@
   padding-top: 16px;
   font-size: 12px;
 
-  @include media(lg) {
+  @include mixins.media(lg) {
     grid-template-columns: 90px 90px 90px 70px 70px 80px 32px;
   }
 }

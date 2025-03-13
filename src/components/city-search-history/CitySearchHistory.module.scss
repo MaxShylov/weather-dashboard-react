@@ -1,4 +1,4 @@
-@import "src/styles/media";
+@use "src/styles/mixins";
 
 .title {
   text-align: center;
@@ -18,7 +18,7 @@
     border-bottom: none;
   }
 
-  @include media(md) {
+  @include mixins.media(md) {
     padding: 15px 30px;
     font-size: 18px;
   }

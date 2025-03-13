@@ -1,4 +1,4 @@
-@import "src/styles/media";
+@use "src/styles/mixins";
 
 .header {
   position: sticky;
@@ -17,7 +17,7 @@
   grid-template-columns: min-content 1fr 40px;
   gap: 24px;
 
-  @include media(md) {
+  @include mixins.media(md) {
     grid-template-columns: min-content 1fr min-content;
   }
 }
@@ -39,7 +39,7 @@
   align-items: center;
   margin-left: auto;
 
-  @include media(md) {
+  @include mixins.media(md) {
     order: 1
   }
 }

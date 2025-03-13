@@ -1,4 +1,4 @@
-@import "src/styles/media";
+@use "src/styles/mixins";
 
 $container-widths: (
     xs: 100%,
@@ -15,7 +15,7 @@ $container-widths: (
   margin-inline: auto;
 
   @each $size, $width in $container-widths {
-    @include media($size) {
+    @include mixins.media($size) {
       max-width: $width;
     }
   }

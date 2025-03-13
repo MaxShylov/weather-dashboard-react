@@ -1,4 +1,4 @@
-@import "src/styles/media";
+@use "src/styles/mixins";
 
 .list {
   display: flex;
@@ -28,7 +28,7 @@
     border-bottom: none;
   }
 
-  @include media(md) {
+  @include mixins.media(md) {
     display: grid;
     grid-template-columns: 200px 1fr;
     gap:16px;

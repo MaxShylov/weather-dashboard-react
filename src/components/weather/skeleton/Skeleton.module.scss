@@ -1,4 +1,4 @@
-@import "../../../styles/media";
+@use "src/styles/mixins";
 
 .date {
   &:global {
@@ -22,11 +22,11 @@
         width: 100%;
         height: 125px;
 
-        @include media(md) {
+        @include mixins.media(md) {
           height: 142px;
         }
 
-        @include media(lg) {
+        @include mixins.media(lg) {
           height: 160px;
         }
       }

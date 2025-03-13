@@ -1,4 +1,4 @@
-@import "../../styles/media";
+@use "src/styles/mixins";
 
 .weatherCurrent {
   display: flex;
@@ -15,7 +15,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 
-  @include media(md) {
+  @include mixins.media(md) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -35,7 +35,7 @@
       align-items: center;
       font-size: 16px;
 
-      @include media(md) {
+      @include mixins.media(md) {
         font-size: 20px;
       }
     }
@@ -53,11 +53,11 @@
 
   font-size: 26px;
 
-  @include media(md) {
+  @include mixins.media(md) {
     font-size: 36px;
   }
 
-  @include media(lg) {
+  @include mixins.media(lg) {
     font-size: 48px;
   }
 }
@@ -67,7 +67,7 @@
 
   font-size: 18px;
 
-  @include media(md) {
+  @include mixins.media(md) {
     font-size: 24px;
   }
 }
@@ -76,12 +76,12 @@
   width: 24px;
   height: 24px;
 
-  @include media(md) {
+  @include mixins.media(md) {
     width: 28px;
     height: 28px;
   }
 
-  @include media(lg) {
+  @include mixins.media(lg) {
     width: 40px;
     height: 40px;
   }
