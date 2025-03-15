@@ -5,6 +5,8 @@ import AutoComplete from 'antd/es/auto-complete';
 import { type InputRef } from 'antd/es/input';
 import Input from 'antd/es/input/Input';
 
+import { skipToken } from '@reduxjs/toolkit/query';
+
 import { Loader } from '@/components/loader';
 import { addHistoryCity } from '@/features/historySlice';
 import { setSelectedCity } from '@/features/weatherSlice';
@@ -23,8 +25,7 @@ export const SearchCity: FC = () => {
   const dispatch = useAppDispatch();
 
   const { currentData: cities, isFetching } = useSearchCityQuery(
-    searchCityName,
-    { skip: !searchCityName }
+    searchCityName || skipToken
   );
 
   const options = useMemo(() => {
